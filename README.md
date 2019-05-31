@@ -31,11 +31,14 @@ Access [GraphiQL](http://localhost:4000/graphql) web interface to run queries li
 
 ```
 {
-  author(id: 346732) {
-    name,
+  author(id: 9810) {
+    name
     books {
       title,
-      isbn
+      isbn,
+      authors {
+        name
+      }
     }
   }
 }
