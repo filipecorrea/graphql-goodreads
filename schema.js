@@ -22,7 +22,7 @@ const BookType = new GraphQLObjectType({
     },
     isbn: {
       type: GraphQLString,
-      resolve: xml => xml.isbn[0]
+      resolve: xml => typeof (xml.isbn[0]) === 'string' ? xml.isbn[0] : ''
     }
   })
 })
